@@ -1,0 +1,565 @@
+{
+	"info": {
+		"_postman_id": "854aa5a8-c31f-4acd-bd76-fce85e327a63",
+		"name": "auth-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get token-authorization_code memory",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "oidc-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b2lkYy1jbGllbnQ6c2VjcmV0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "eDYfvdoW2pdD39TdJG8_TvdlLgEXLuOKqKadIT0_bp_QjounUa92Qp0QGTL4oh4V-o4ht7GiaRE5wZXjrQijGlavjLofzIHVRPW3B124Bn2GxPWLEnJE9cFeXSMONc5f",
+							"type": "default"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token-authorization_code db",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "messaging-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b2lkYy1jbGllbnQ6c2VjcmV0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "Vqrqg6Hj9HnV_taFfX3B-nrT8t0mBrN-XPUv7pSzJukWce-AHmW5JuFKZvvWvMYaw-ylTJbbeNbDu_fuoiVhzEZrX5kY6hLghcFNhamXI1bYAAxUnts4o3fZlvjv2UMA",
+							"type": "default"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token - client_credentials memory",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "oidc-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "sqkjaB5mF_HgTbHA714DOO67BhAUUZt4YzLzTriUJGqC4RC26H_Hh6jZL3Cy-J7CnGm0ZSSKfTwJh0Ol7UCD_B5BpW5jxD3DW15Xl0Q-GjnvtwY5NC5RbyN92PenwVoq",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token - client_credentials db",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "messaging-client",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "sqkjaB5mF_HgTbHA714DOO67BhAUUZt4YzLzTriUJGqC4RC26H_Hh6jZL3Cy-J7CnGm0ZSSKfTwJh0Ol7UCD_B5BpW5jxD3DW15Xl0Q-GjnvtwY5NC5RbyN92PenwVoq",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"description": "需要以Basic的方式放在header中",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "oidc-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b2lkYy1jbGllbnQ6c2VjcmV0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "sqkjaB5mF_HgTbHA714DOO67BhAUUZt4YzLzTriUJGqC4RC26H_Hh6jZL3Cy-J7CnGm0ZSSKfTwJh0Ol7UCD_B5BpW5jxD3DW15Xl0Q-GjnvtwY5NC5RbyN92PenwVoq",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+							"type": "default"
+						},
+						{
+							"key": "refresh_token",
+							"value": "X64ucwVhtXkNqS8ZjwA5ohkiHLjq7y9ua2gbEEDmRx8GkKiDRod4QKpCe4DWS2WDzFH5c39c4Luwfopr4DDyaWNK5NONJOp0azu0wiFCLVVKdVIe9UUv07y-ml7jSDnO",
+							"type": "default"
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get code 获取code， 需要在浏览器端执行 db",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "oidc-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b2lkYy1jbGllbnQ6c2VjcmV0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "2BKQbEdeEnLCXvax7hOE-N2ubJB1Bj0qe7OznWGNgAw-FW5P97-pHFGbVUzMqmzAilIuTjGL0agSrJb2yXl8lBnCgXoxG1imYinkQeGjAheP_-fq_M-j3sUY5ClAT_wB",
+							"type": "default"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/authorize?client_id=messaging-client&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "messaging-client"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "openid"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get code 获取code， 需要在浏览器端执行 memory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "oidc-client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b2lkYy1jbGllbnQ6c2VjcmV0",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "2BKQbEdeEnLCXvax7hOE-N2ubJB1Bj0qe7OznWGNgAw-FW5P97-pHFGbVUzMqmzAilIuTjGL0agSrJb2yXl8lBnCgXoxG1imYinkQeGjAheP_-fq_M-j3sUY5ClAT_wB",
+							"type": "default"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "default"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+							"type": "default"
+						},
+						{
+							"key": "client_id",
+							"value": "oidc-client",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "client_secrect",
+							"value": "secrect",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth2/authorize?client_id=oidc-client&response_type=code&scope=openid&redirect_uri=http://127.0.0.1:8080/login/oauth2/code/oidc-client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "oidc-client"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "openid"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://127.0.0.1:8080/login/oauth2/code/oidc-client"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
